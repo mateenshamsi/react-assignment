@@ -25,7 +25,8 @@ function App() {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center mt-20'>
+    <div className='flex flex-col gap-4  justify-center items-center mt-20'>
+      <h1>Select a value:</h1>
       <select 
         onChange={handleOptionChange} 
         value={selValue} 
@@ -34,9 +35,11 @@ function App() {
         <option value="">select</option>
         <option value="H">H</option>
         <option value="T">T</option>
+        <option value="Z">Z</option>
       </select>
       
       <div className="flex justify-between mt-4">
+      <p>Values selected:</p>
         {columns.map((col, colIndex) => (
           <div  className='flex flex-col mr-2 p-2 '>
             {col.map((val, valIndex) => (
